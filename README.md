@@ -1,8 +1,12 @@
 # lastercutdeskorganizer
 Generates an svg file of parts for a desk organizer that can be laser cut
-Software Description
+
+Software Description:
+
 For this assignment I built two classes to abstract shape and component creation in such a way that I can effectively create any combination of parts, joints, and size that I desire, as well as the ability to adjust for various screws and nuts. By using these classes in my main method, I can design any desk organizer I want. The SVG printout provided above was just one potential implementation. Beyond this assignment, my next step will be to generate a third class called ‘Desk Organizer’ that will make it easier for users to change design parameters via command line.
+
 Shape Class
+
 The Shape class represents a 2D shape with a set of points defining its boundaries. It provides methods for generating and manipulating shapes, and for converting shapes to and from SVG code.
 
 Constructor
@@ -13,8 +17,6 @@ Parameters
 points (list of tuples, optional): A list of tuples representing the x, y coordinates of the shape's boundary points. The default value is None.
 
 Methods
-
-Getters
 
 get_points()
 This method returns a list of tuples representing the x, y coordinates of the shape's boundary points.
@@ -33,8 +35,6 @@ This method returns the width of the shape.
 
 get_area()
 This method returns the area of the shape.
-
-Setters
 
 set_points(points)
 This method sets the list of points that define the shape's boundaries.
@@ -63,6 +63,7 @@ This method generates a polygon with a given number of sides, type of joints, nu
 to_svg(scaling_factor)
 This method returns an SVG representation of the shape as a string, with all coordinates scaled by a specified factor.
 
+
 Component Class
 The Component class represents a group of 2D shapes needed to make a component. It contains a dictionary of shapes which each contain all the points needed to make that shape. The outermost shape that contains all the other shapes is set as the mother shape. The component can be moved around as a whole and rotated.
 
@@ -77,9 +78,7 @@ shapes: a list of instances of the Shape class representing the shapes in the co
 components: a list of instances of the Component class representing the components in the component (default: [])
 fractal: a list of tuples representing the points of the fractal in the component (default: [])
 
-Methods
-
-Getters
+Methods:
 
 get_shapes():
 Returns a list of shapes in the component.
@@ -108,8 +107,6 @@ Returns the dimensions of the logo.
 
 to_svg(svg_code="", scaling_factor=1):
 Converts the component to an SVG representation as a string.
-
-Setters
 
 set_mother_shape(shape):
 Sets the mother shape of the component.
