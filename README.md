@@ -1,4 +1,4 @@
-# lastercutdeskorganizer
+# Laser Cut Desk Organizer
 Generates an svg file of parts for a desk organizer that can be laser cut
 
 Software Description:
